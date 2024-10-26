@@ -1,20 +1,20 @@
 # libft
 
 ## Parte 1 - Funções da LibC
-- [ ] isalpha
-- [ ] isdigit
-- [ ] isalnum
-- [ ] isascii
-- [ ] isprint
-- [ ] satrlen
+- [x] isalpha
+- [x] isdigit
+- [x] isalnum
+- [x] isascii
+- [x] isprint
+- [x] strlen
 - [ ] memset
 - [ ] bzero
 - [ ] memcpy
 - [ ] memmove
 - [ ] strlcpy
 - [ ] strlcat
-- [ ] toupper
-- [ ] tolower
+- [x] toupper
+- [x] tolower
 - [ ] strchr
 - [ ] strrchr
 - [ ] strncmp
