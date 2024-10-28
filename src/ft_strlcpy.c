@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dyuri-de <dyuri-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 15:35:36 by dyuri-de          #+#    #+#             */
-/*   Updated: 2024/10/27 15:35:38 by dyuri-de         ###   ########.fr       */
+/*   Created: 2024/10/27 18:52:04 by dyuri-de          #+#    #+#             */
+/*   Updated: 2024/10/27 18:52:05 by dyuri-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *v_mem, int r, size_t n);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
-void	*ft_memset(void *v_mem, int r, size_t n)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t		index;
-	char		*m_mem;
+	size_t	index;
 
-	m_mem = v_mem;
 	index = 0;
-	while (n != 0)
+	if (size == 0)
+		return (ft_strlen(src));
+	while (src[index] != '\0' && index < size - 1)
 	{
-		m_mem[index] = r;
+		dest[index] = src[index];
 		index++;
-		n--;
 	}
-	return (m_mem);
+	dest[index] = '\0';
+	return (ft_strlen(src));
 }

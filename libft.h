@@ -14,7 +14,9 @@
 # define LIBFT_H
 # include <stdio.h>
 
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -24,5 +26,6 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	*ft_memset(void *v_mem, int c, size_t n);
 void	ft_bzero(void *v_mem, size_t n);
+void	*ft_memcpy(void *to, const void *from, size_t l);
 
 #endif

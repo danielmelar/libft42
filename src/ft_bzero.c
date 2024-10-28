@@ -25,6 +25,6 @@ void	ft_bzero(void *v_mem, size_t n)
 	{
 		m_mem[index] = '\0';
 		index++;
-        n--;
+		n--;
 	}
 }

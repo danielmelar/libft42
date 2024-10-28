@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dyuri-de <dyuri-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 15:35:36 by dyuri-de          #+#    #+#             */
-/*   Updated: 2024/10/27 15:35:38 by dyuri-de         ###   ########.fr       */
+/*   Created: 2024/10/27 18:03:52 by dyuri-de          #+#    #+#             */
+/*   Updated: 2024/10/27 18:03:53 by dyuri-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *v_mem, int r, size_t n);
+void	*ft_memcpy(void *to, const void *from, size_t l);
 
-void	*ft_memset(void *v_mem, int r, size_t n)
+void	*ft_memcpy(void *to, const void *from, size_t l)
 {
+	const char	*m_from;
 	size_t		index;
-	char		*m_mem;
+	char		*m_to;
 
-	m_mem = v_mem;
 	index = 0;
-	while (n != 0)
+	m_to = to;
+	m_from = from;
+	while (index < l)
 	{
-		m_mem[index] = r;
+		m_to[index] = m_from[index];
 		index++;
-		n--;
 	}
-	return (m_mem);
+	return (to);
 }
