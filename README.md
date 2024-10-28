@@ -7,12 +7,12 @@
 - [x] isascii
 - [x] isprint
 - [x] strlen
-- [ ] memset
-- [ ] bzero
-- [ ] memcpy
+- [x] memset
+- [x] bzero
+- [x] memcpy
 - [ ] memmove
-- [ ] strlcpy
-- [ ] strlcat
+- [x] strlcpy
+- [x] strlcat
 - [x] toupper
 - [x] tolower
 - [ ] strchr
