@@ -24,6 +24,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+int		ft_strncmp(const char *string1, const char *string2, size_t limit);
 void	*ft_memset(void *v_mem, int c, size_t n);
 void	ft_bzero(void *v_mem, size_t n);
 void	*ft_memcpy(void *to, const void *from, size_t l);

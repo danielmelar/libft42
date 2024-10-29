@@ -22,7 +22,8 @@ SRC = src/ft_isalnum.c \
       src/ft_bzero.c \
       src/ft_memcpy.c \
       src/ft_strlcpy.c \
-      src/ft_strlcat.c
+      src/ft_strlcat.c \
+      src/ft_strncmp.c
 
 OBJS = ${SRC:.c=.o}
 NAME = libft.a
