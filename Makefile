@@ -10,20 +10,21 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRC = src/ft_isalnum.c \
-      src/ft_isalpha.c \
-      src/ft_isdigit.c \
-      src/ft_isascii.c \
-      src/ft_isprint.c \
-      src/ft_strlen.c \
-      src/ft_toupper.c \
-      src/ft_tolower.c \
-      src/ft_memset.c \
-      src/ft_bzero.c \
-      src/ft_memcpy.c \
-      src/ft_strlcpy.c \
-      src/ft_strlcat.c \
-      src/ft_strncmp.c
+SRC =  src/ft_strchr.c
+#      src/ft_isalnum.c \
+#      src/ft_isalpha.c \
+#      src/ft_isdigit.c \
+#      src/ft_isascii.c \
+#      src/ft_isprint.c \
+#      src/ft_strlen.c \
+#      src/ft_toupper.c \
+#      src/ft_tolower.c \
+#      src/ft_memset.c \
+#      src/ft_bzero.c \
+#      src/ft_memcpy.c \
+#      src/ft_strlcpy.c \
+#      src/ft_strlcat.c \
+#      src/ft_strncmp.c
 
 OBJS = ${SRC:.c=.o}
 NAME = libft.a
@@ -47,4 +48,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+#.PHONY: all clean fclean re

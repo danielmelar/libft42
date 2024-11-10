@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dyuri-de <dyuri-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 22:01:19 by dyuri-de          #+#    #+#             */
-/*   Updated: 2024/10/28 22:10:27 by dyuri-de         ###   ########.fr       */
+/*   Created: 2024/11/08 23:39:12 by dyuri-de          #+#    #+#             */
+/*   Updated: 2024/11/08 23:39:13 by dyuri-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+char	*ft_strchr(const char *s, int c);
 
-int	ft_strncmp(const char *string1, const char *string2, size_t limit);
-
-int	ft_strncmp(const char *string1, const char *string2, size_t limit)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	count;
-
-	count = 0;
-	if (limit == 0)
-		return (0);
-	while (string1[count] && (count < limit - 1))
+	while (*s)
 	{
-		if (string1[count] != string2[count])
-			break ;
-		count++;
+		if (*s == (unsigned char)c)
+		{
+			return ((char *)s);
+		}
+		s++;
 	}
-	return (string1[count] - string2[count]);
+	if (*s == (unsigned char)c)
+		return ((char *)s);
+	return (0);
 }
+// *s retorna a string 'incompleta' pois ele é o ponteiro para a string, logo
+// se eu tenho, por ex, a string "ovo" e *s == v, ao retorna o ponteiro, ele 
+// retorna até o '\0', que é 'vo'
