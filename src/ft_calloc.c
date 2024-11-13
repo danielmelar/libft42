@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dyuri-de <dyuri-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 22:01:19 by dyuri-de          #+#    #+#             */
-/*   Updated: 2024/10/28 22:10:27 by dyuri-de         ###   ########.fr       */
+/*   Created: 2024/11/12 23:51:22 by dyuri-de          #+#    #+#             */
+/*   Updated: 2024/11/12 23:51:23 by dyuri-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *string1, const char *string2, size_t limit);
-
-int	ft_strncmp(const char *string1, const char *string2, size_t limit)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	count;
+	void	*arr;
 
-	count = 0;
-	if (limit == 0)
-		return (0);
-	while (string1[count] && (count < limit - 1))
-	{
-		if ((unsigned char)string1[count] != (unsigned char)string2[count])
-			break ;
-		count++;
-	}
-	return ((unsigned char)string1[count] - (unsigned char)string2[count]);
+	arr = malloc(nmemb * size);
+	if (arr == NULL)
+		return (NULL);
+	ft_bzero(arr, (nmemb * size));
+	return (arr);
 }
+// vetores alocados por malloc e callos iniciam com 0(NULL)
+// espaços iniciados com NULL através de ft_bzero().

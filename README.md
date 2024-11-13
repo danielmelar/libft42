@@ -10,20 +10,20 @@
 - [x] memset
 - [x] bzero
 - [x] memcpy
-- [ ] memmove
+- [x] memmove
 - [x] strlcpy
 - [x] strlcat
 - [x] toupper
 - [x] tolower
-- [ ] strchr
-- [ ] strrchr
+- [x] strchr
+- [x] strrchr
 - [x] strncmp
-- [ ] memchr
-- [ ] memcmp
-- [ ] strnstr
-- [ ] atoi
-- [ ] calloc (deverá ser usado o malloc())
-- [ ] strdup(deverá ser uado o malloc())
+- [x] memchr
+- [x] memcmp
+- [x] strnstr
+- [x] atoi
+- [x] calloc (deverá ser usado o malloc())
+- [x] strdup(deverá ser uado o malloc())
 
 ## Parte 2 - Funções adicionais
 - [ ] ft_substr

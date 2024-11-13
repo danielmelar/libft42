@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dyuri-de <dyuri-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 22:01:19 by dyuri-de          #+#    #+#             */
-/*   Updated: 2024/10/28 22:10:27 by dyuri-de         ###   ########.fr       */
+/*   Created: 2024/11/13 00:14:14 by dyuri-de          #+#    #+#             */
+/*   Updated: 2024/11/13 00:14:15 by dyuri-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *string1, const char *string2, size_t limit);
-
-int	ft_strncmp(const char *string1, const char *string2, size_t limit)
+char	*ft_strdup(const char *s)
 {
-	size_t	count;
+	char	*arr;
 
-	count = 0;
-	if (limit == 0)
-		return (0);
-	while (string1[count] && (count < limit - 1))
-	{
-		if ((unsigned char)string1[count] != (unsigned char)string2[count])
-			break ;
-		count++;
-	}
-	return ((unsigned char)string1[count] - (unsigned char)string2[count]);
+	arr = (char *)malloc(ft_strlen(s) * sizeof(char) + 1);
+	if (arr == NULL)
+		return (NULL);
+	ft_memcpy(arr, s, ft_strlen(s));
+	arr[ft_strlen(s)] = '\0';
+	return (arr);
 }

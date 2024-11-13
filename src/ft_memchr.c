@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dyuri-de <dyuri-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 22:01:19 by dyuri-de          #+#    #+#             */
-/*   Updated: 2024/10/28 22:10:27 by dyuri-de         ###   ########.fr       */
+/*   Created: 2024/11/10 11:56:08 by dyuri-de          #+#    #+#             */
+/*   Updated: 2024/11/10 11:56:09 by dyuri-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *string1, const char *string2, size_t limit);
-
-int	ft_strncmp(const char *string1, const char *string2, size_t limit)
+char	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	count;
+	size_t	index;
 
-	count = 0;
-	if (limit == 0)
-		return (0);
-	while (string1[count] && (count < limit - 1))
+	index = 0;
+	while (n > 0)
 	{
-		if ((unsigned char)string1[count] != (unsigned char)string2[count])
-			break ;
-		count++;
+		if (((unsigned char *)s)[index] == (unsigned char)c)
+		{
+			return ((char *)s + index);
+		}
+		index++;
+		n--;
 	}
-	return ((unsigned char)string1[count] - (unsigned char)string2[count]);
+	return (0);
 }

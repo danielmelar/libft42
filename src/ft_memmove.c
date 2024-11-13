@@ -1,31 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dyuri-de <dyuri-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 22:01:19 by dyuri-de          #+#    #+#             */
-/*   Updated: 2024/10/28 22:10:27 by dyuri-de         ###   ########.fr       */
+/*   Created: 2024/11/12 07:24:13 by dyuri-de          #+#    #+#             */
+/*   Updated: 2024/11/12 07:24:14 by dyuri-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *string1, const char *string2, size_t limit);
+void	*ft_memmove(void *dest, const void *src, size_t nbytes);
 
-int	ft_strncmp(const char *string1, const char *string2, size_t limit)
+void	*ft_memmove(void *dest, const void *src, size_t nbytes)
 {
-	size_t	count;
+	const char		*msrc;
+	char			*mdest;
+	size_t			index;
 
-	count = 0;
-	if (limit == 0)
-		return (0);
-	while (string1[count] && (count < limit - 1))
+	index = 0;
+	mdest = dest;
+	msrc = src;
+	if (mdest < msrc)
 	{
-		if ((unsigned char)string1[count] != (unsigned char)string2[count])
-			break ;
-		count++;
+		while (index < nbytes)
+		{
+			mdest[index] = msrc[index];
+			index++;
+		}
 	}
-	return ((unsigned char)string1[count] - (unsigned char)string2[count]);
+	else
+	{
+		index = nbytes;
+		while (index > 0)
+		{
+			index--;
+			mdest[index] = msrc[index];
+		}
+	}
+	return (dest);
 }
