@@ -66,7 +66,7 @@ static void	*ft_free(char **mstr, int count)
 	return (0);
 }
 
-void	ft_valid_mstr(const void *mstr)
+static void	ft_valid_mstr(const void *mstr)
 {
 	if (!mstr)
 		return ;

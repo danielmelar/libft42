@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	valid_n(int nb, int fd)
+static int	valid_n(int nb, int fd)
 {
 	if (nb == -2147483648)
 	{
