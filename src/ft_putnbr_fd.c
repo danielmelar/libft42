@@ -12,7 +12,6 @@
 
 #include "libft.h"
 
-
 int	valid_n(int nb, int fd)
 {
 	if (nb == -2147483648)
@@ -33,11 +32,11 @@ int	valid_n(int nb, int fd)
 	return (nb);
 }
 
-void    ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-    int		char_number;
-	char	numbers[12];
-	int		index;
+	char			numbers[12];
+	int				index;
+	int				char_number;
 
 	n = valid_n(n, fd);
 	if (n == 0)
