@@ -30,7 +30,7 @@
 - [x] ft_strjoin
 - [x] ft_strtim
 - [x] ft_split
-- [ ] ft_itoa
+- [x] ft_itoa
 - [x] ft_strmapi
 - [x] ft_striteri
 - [x] ft_putchar_fd
