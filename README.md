@@ -27,12 +27,12 @@
 
 ## Parte 2 - Funções adicionais
 - [x] ft_substr
-- [ ] ft_strjoin
-- [ ] ft_strtim
-- [ ] ft_split
+- [x] ft_strjoin
+- [x] ft_strtim
+- [x] ft_split
 - [ ] ft_itoa
-- [ ] ft_strmapi
-- [ ] ft_striteri
+- [x] ft_strmapi
+- [x] ft_striteri
 - [x] ft_putchar_fd
 - [x] ft_putstr_fd
 - [x] ft_putendl_fd
