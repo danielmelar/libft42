@@ -66,10 +66,11 @@ static void	*ft_free(char **mstr, int count)
 	return (0);
 }
 
-static void	ft_valid_mstr(const void *mstr)
+static void	ft_define_vars(int *j, int *init_word, size_t *index)
 {
-	if (!mstr)
-		return ;
+	*index = 0;
+	*j = 0;
+	*init_word = -1;
 }
 
 char	**ft_split(char const *s, char c)
@@ -80,10 +81,9 @@ char	**ft_split(char const *s, char c)
 	char	**mstr;
 
 	mstr = ft_calloc((ft_count_word(s, c) + 1), sizeof(char *));
-	index = 0;
-	j = 0;
-	init_word = -1;
-	ft_valid_mstr(mstr);
+	if (!mstr)
+		return (0);
+	ft_define_vars(&j, &init_word, &index);
 	while (index <= ft_strlen(s))
 	{
 		if (s[index] != c && init_word < 0)

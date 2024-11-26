@@ -22,5 +22,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(arr, (nmemb * size));
 	return (arr);
 }
-// vetores alocados por malloc e callos iniciam com 0(NULL)
-// espaços iniciados com NULL através de ft_bzero().

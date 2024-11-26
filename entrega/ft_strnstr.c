@@ -39,6 +39,3 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// WTF: atribuindo 0 a cindex na linha 23(abaixo da declaração do index)
-// dá erro em um teste. WHY?

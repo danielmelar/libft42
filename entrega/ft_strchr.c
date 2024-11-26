@@ -26,6 +26,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (0);
 }
-// *s retorna a string 'incompleta' pois ele é o ponteiro para a string, logo
-// se eu tenho, por ex, a string "ovo" e *s == v, ao retorna o ponteiro, ele 
-// retorna até o '\0', que é 'vo'

@@ -20,6 +20,8 @@ void	*ft_memcpy(void *to, const void *from, size_t l)
 	size_t		index;
 	char		*m_to;
 
+	if (!to && !from)
+		return (0);
 	index = 0;
 	m_to = to;
 	m_from = from;

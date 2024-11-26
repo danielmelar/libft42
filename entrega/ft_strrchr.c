@@ -29,15 +29,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-
-	// while (*s)
-	// 	s++;
-	// while (*s >= 0)
-	// {
-	// 	if (*s == (unsigned char)c)
-	// 	{
-	// 		return ((char *)s);
-	// 	}
-	// 	s--;
-	// }
-	// return (0);
